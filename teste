@@ -1,0 +1,14 @@
+entrada = input("Digite a sequência de oportunidades: ")
+oportunidades_aproveitadas = 0
+oportunidades_perdidas = 0
+contador = 0
+for caracter in entrada:
+    if caracter == "|":
+        contador += 1
+    elif caracter == "-":
+        oportunidades_perdidas += contador
+        contador = 0
+if contador > 0:
+    oportunidades_aproveitadas += contador
+oportunidades_geradas = oportunidades_aproveitadas + oportunidades_perdidas
+print("O número total de oportunidades geradas é:", oportunidades_geradas)
